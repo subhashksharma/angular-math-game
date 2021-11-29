@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+           <h1> Math Game </h1>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="mathGameForm" >
+                {{mathGameForm.value.a}}+{{mathGameForm.value.b}} =
+                <input type="text"  formControlName="result">
+            </form>
+
+            <hr>
+            
+            {{mathGameForm.valid}}
+            {{mathGameForm.value | json}}
+
+            {{mathGameForm.errors | json}}
+        </div>
+        <div class="col-md-6"> {{mathGameForm.value.Result}}</div>
+    </div>
+    
+</div>
